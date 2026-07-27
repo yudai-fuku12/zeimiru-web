@@ -1,58 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ゼイミル サポート</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body { font-family: -apple-system, "Hiragino Sans", system-ui, sans-serif;
-           max-width: 720px; margin: 0 auto; padding: 24px; line-height: 1.8;
-           color: #1a1a1a; background: #fff; }
-    @media (prefers-color-scheme: dark) { body { color: #eee; background: #111; } }
-    h1 { font-size: 24px; border-bottom: 3px solid #208AEF; padding-bottom: 8px; }
-    h2 { font-size: 17px; margin-top: 28px; }
-    .q { font-weight: 600; }
-    .a { color: #444; margin-bottom: 20px; }
-    @media (prefers-color-scheme: dark) { .a { color: #bbb; } }
-    a { color: #208AEF; }
-    .contact { background: rgba(32,138,239,0.08); padding: 16px; border-radius: 8px; margin-top: 32px; }
-    footer { margin-top: 40px; font-size: 13px; color: #888; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート・よくある質問｜ゼイミル</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.8; max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+    color: #2C313A; background: #fff;
+  }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #2E5FBE; padding-bottom: .5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.5rem; color: #2E5FBE; }
+  h3 { font-size: 1rem; margin-top: 1.75rem; }
+  .updated { color: #5A6172; font-size: .9rem; }
+  .note { background: #EEF0F4; padding: 1rem; border-radius: 8px; }
+  .warn { background: rgba(160,82,28,.10); border: 1px solid #A0521C; padding: 1rem; border-radius: 8px; }
+  a { color: #2E5FBE; }
+  ul { padding-left: 1.3rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #E8EAEE; background: #16181D; }
+    .note { background: #22252C; }
+    h2, a { color: #7FA6EE; }
+    .updated { color: #A0A6B4; }
+  }
+</style>
 </head>
 <body>
-  <h1>ゼイミル サポート</h1>
-  <p>ゼイミルは、フリーランス・副業の方の「税金でいくら持っていかれるのか」を年間通して見える化するアプリです。よくある質問をまとめました。</p>
 
-  <h2>よくある質問</h2>
+<h1>ゼイミル サポート</h1>
+<p class="updated">最終更新日: 2026年7月27日</p>
 
-  <p class="q">Q. 表示される金額は正確ですか？</p>
-  <p class="a">A. 入力内容と公開されている税制に基づく<strong>概算・見込み額</strong>です。実際の納税額は各種控除や個別事情で変わります。正式な金額は税務署・税理士・各制度の公式情報でご確認ください。</p>
+<p>
+  ご不明な点は、まず下のよくある質問をご確認ください。解決しない場合は
+  <a href="mailto:fukuyamamasaharu74@gmail.com">fukuyamamasaharu74@gmail.com</a> までご連絡ください。
+  個人で開発・運営しているため、返信までに数日いただくことがあります。
+</p>
 
-  <p class="q">Q. 入力したデータは外部に送られますか？</p>
-  <p class="a">A. いいえ。すべての計算とデータ保存はお使いの端末内だけで行われ、外部に送信されません。アカウント登録も不要です。</p>
+<h2>金額について</h2>
 
-  <p class="q">Q. 記帳（帳簿付け）は必要ですか？</p>
-  <p class="a">A. 必要ありません。売上と経費をざっくり月ごとに入力するだけで、納税見込みと積立額が分かります。</p>
+<h3>アプリの金額と、実際の申告額が違います</h3>
+<p>
+  本アプリの金額は<strong>概算</strong>です。次のものは計算に入れていないため、実際の額とはずれます。
+</p>
+<ul>
+  <li><strong>医療費控除・ふるさと納税・住宅ローン控除</strong> — 該当する場合、実際の税額はアプリの表示より下がります</li>
+  <li><strong>本則課税の消費税</strong> — 仕入れごとの記録が必要なため計算できません。該当する場合、消費税は0円のまま表示されます</li>
+  <li><strong>公的年金の収入</strong> — 年金を受け取りながら事業をしている場合、実際の税額は表示より上がります</li>
+  <li><strong>国保組合（建設国保・医師国保など）</strong> — 市区町村の国民健康保険として計算しています。国保組合は定額のことが多く、大きく異なります</li>
+  <li><strong>家族の介護保険料</strong> — 40〜64歳のご家族が国保に加入している場合、実際の保険料は表示より上がります</li>
+  <li><strong>軽減税率・非課税売上・国外の取引</strong> — 売上はすべて標準税率10%の課税売上として計算しています。海外の会社からの広告収入などは、実際には消費税がかからないことがあります</li>
+  <li><strong>住民税の調整控除、自治体独自の上乗せ</strong></li>
+</ul>
+<p>
+  正式な申告額は確定申告書で確定します。金額が大きいときや判断に迷うときは、税務署または税理士にご確認ください。
+</p>
 
-  <p class="q">Q. 会社員の副業でも使えますか？</p>
-  <p class="a">A. 使えます。給与収入と副業の所得を合わせた税額を計算し、「確定申告が必要か」の判定や、住民税を普通徴収にする手順（会社に知られにくくする方法）もご案内します。</p>
+<h3>国民健康保険の金額が、自分の市区町村と違います</h3>
+<p>
+  市区町村ごとの保険料率は、主要6市と県庁所在地の41市について保持しています。
+  それ以外の市区町村を選んだ場合は、県内の代表市または全国平均の料率で概算します。
+  この場合はアプリの「お住まい」に、どの料率を使っているかを表示しています。
+</p>
+<p>
+  なお、市区町村によってずれるのは<strong>国民健康保険だけ</strong>です。所得税・住民税・個人事業税は市区町村によって変わりません。
+</p>
 
-  <p class="q">Q. 国民健康保険の料率はどうやって決まりますか？</p>
-  <p class="a">A. お住まいの都道府県・市を選ぶと、その自治体の料率が自動で反映されます。一覧にない市の場合は、同じ県の県庁所在地の料率で概算します。</p>
+<h3>毎月の積立額が、月を追うごとに増えていきます</h3>
+<p>
+  入力済みの月だけで計算していると、所得が増えるほど税率が上がる仕組み（累進課税）のため、
+  年末に近づくほど必要額が増えます。「今年の着地見込み」に年間の見込み額を入れていただくと、
+  毎月の積立額が年内で一定になります。
+</p>
 
-  <p class="q">Q. 機種変更するとデータは移りますか？</p>
-  <p class="a">A. 現在のバージョンはデータを端末内にのみ保存しているため、機種変更時の自動引き継ぎには対応していません（今後のアップデートで対応を検討しています）。</p>
+<h3>副業なのに、増える税金が0円と出ます</h3>
+<p>
+  副業の税額は「給与と合わせた所得」で決まります。給与収入が未入力だと正しく計算できません。
+  「売上と経費」の中にある「給与収入（年収）」に、源泉徴収票の支払金額を入れてください。
+</p>
 
-  <p class="q">Q. 購入した機能を復元できますか？</p>
-  <p class="a">A. 同じApple IDであれば、アプリ内の「購入を復元」から復元できます。</p>
+<h2>購入について</h2>
 
-  <div class="contact">
-    <strong>お問い合わせ</strong><br>
-    上記で解決しない場合は、以下までお気軽にご連絡ください。<br>
+<h3>確定申告パスは毎年払う必要がありますか</h3>
+<p>
+  確定申告パスは<strong>年分ごとの商品</strong>です。購入した年分の機能は期限なくずっとお使いいただけますが、
+  翌年分の申告に使う機能は別の商品となるため、あらためて購入が必要です。
+  月額の自動更新（サブスクリプション）ではありませんので、解約の手続きは不要です。
+</p>
+
+<h3>機種変更したら、購入した機能が使えなくなりました</h3>
+<p>
+  Pro画面の「<strong>購入を復元する</strong>」をタップしてください。購入時と同じApple IDでサインインしていれば、
+  追加のお支払いなしで復元できます。
+</p>
+
+<h3>「商品情報を読み込めませんでした」と表示されます</h3>
+<p>
+  通信環境をご確認のうえ、しばらく経ってからお試しください。この状態では購入は行われていません。
+  機内モードやネットワーク制限が有効になっていないかもご確認ください。
+</p>
+
+<h3>返金してほしい</h3>
+<p>
+  App Store での購入の返金は Apple が受け付けています。開発者側で返金処理を行うことはできません。
+  <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">reportaproblem.apple.com</a>
+  からお手続きください。
+</p>
+
+<h2>データについて</h2>
+
+<div class="warn">
+  <p><strong>入力したデータは、お使いの端末の中だけに保存されています。</strong></p>
+  <p>
+    クラウドへの自動保存はありません。機種変更・アプリの削除・端末の故障でデータは失われ、元に戻せません。
+    定期的にバックアップを書き出しておくことを強くおすすめします。
+  </p>
+</div>
+
+<h3>機種変更をするときは</h3>
+<ol>
+  <li>古い端末で「設定 → データのバックアップ → バックアップを書き出す」を実行します</li>
+  <li>書き出したファイルを、iCloud Drive やメールなど、新しい端末から取り出せる場所に保存します</li>
+  <li>新しい端末にゼイミルをインストールします</li>
+  <li>「設定 → データのバックアップ → ファイルを選ぶ」で、保存したファイルを読み込みます</li>
+  <li>Pro画面の「購入を復元する」で、確定申告パスを復元します</li>
+</ol>
+
+<h3>バックアップファイルはどこに保存されますか</h3>
+<p>
+  書き出しを実行すると iOS の共有画面が開きます。保存先はご自身でお選びください
+  （「ファイル」アプリ、iCloud Drive、メールでご自身宛に送信、など）。
+  ファイルには売上・経費・設定がそのまま入っていますので、取り扱いにはご注意ください。
+</p>
+
+<h3>データが消えてしまいました。復旧できますか</h3>
+<p>
+  申し訳ありませんが、バックアップファイルをお持ちでない場合、開発者側でデータを復元することはできません。
+  データを開発者のサーバーに保存していないためです。
+</p>
+
+<h2>その他</h2>
+
+<h3>対応している年分は</h3>
+<p>
+  2026年分（令和8年分）の税制に対応しています。2027年分は、税制が確定し次第アップデートで対応します。
+</p>
+
+<h3>Android版はありますか</h3>
+<p>
+  現在はiOSのみです。
+</p>
+
+<h3>このアプリは国税庁の公式アプリですか</h3>
+<p>
+  いいえ。本アプリは国税庁・e-Tax・地方公共団体とは関係のない、個人が開発した非公式のアプリです。
+</p>
+
+<h2>お問い合わせ</h2>
+<div class="note">
+  <p>
     <a href="mailto:fukuyamamasaharu74@gmail.com">fukuyamamasaharu74@gmail.com</a>
-  </div>
+  </p>
+  <p>
+    お問い合わせの際は、<strong>アプリのバージョン</strong>・<strong>表示中の年分</strong>・
+    <strong>確定申告パスの購入有無</strong>をお知らせいただけると、確認がスムーズです。
+    アプリの「設定 → 困ったときは → メールで問い合わせる」からお送りいただくと、これらが自動で入力されます。
+  </p>
+  <p>返信の目安: 3営業日以内（日本語のみ）</p>
+</div>
 
-  <footer>© 2026 ゼイミル ／ <a href="./privacy.html">プライバシーポリシー</a></footer>
+<p style="margin-top:3rem"><a href="./privacy.html">プライバシーポリシーはこちら</a></p>
+
 </body>
 </html>
